@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* css box  */
+            width: 60%;
+            height: auto;
+            margin: 40px auto;
+            padding: .7em;
+            border-left: 4px solid rebeccapurple;
+            border-radius: 20px;
+            background-color: tan;
+        }
+        p {
+            color: seagreen;
+            font-family: cursive;
+            font-style: oblique;
+            font-size: 17px;
+        }
+        #more {
+            display: none;
+        }
+        button {
+            border: none;
+            outline: none;
+            background-color: rgb(230, 115, 210);
+            color: black;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 17px;
+            padding: 5px 10px;
+            border-radius: 9px;
+            display: block;
+            margin: 10px auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat tempora autem modi. Consequuntur deserunt quas exercitationem ex perspiciatis cumque illum?<span id="dots">...</span> <span id="more">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione tempora incidunt quod, quam est quas voluptatem asperiores iste ex vel itaque voluptas odit. Provident voluptate doloremque perferendis earum cupiditate. Iusto nobis dolorem unde asperiores? Perspiciatis, quisquam. Provident possimus voluptatum, id enim error tempora cumque esse ipsa totam inventore, nobis fugit veritatis nostrum. Ad mollitia fugit repellat beatae reiciendis perferendis error eveniet dolorum unde dicta, commodi voluptate pariatur autem ex, consequatur repellendus, molestiae nam! Quae consequuntur repudiandae distinctio nesciunt maxime ullam unde quasi at ab, tenetur rem ratione laudantium voluptatibus quibusdam ex nostrum autem laboriosam vero. Amet nam quae sunt quis.</span></p>
+        <button onclick="displayContent()" id="read-more">read more</button>
+    </div>
+    <script>
+        function displayContent() {
+            let btn = document.getElementById("read-more");
+            let dots = document.getElementById("dots");
+            let more = document.getElementById("more");
+            if(dots.style.display === "none") {
+              dots.style.display = "inline";
+              more.style.display = "none";
+              btn.innerHTML = "read more"   
+            } else {
+              dots.style.display = "none";
+              more.style.display = "inline";
+              btn.innerHTML = "read less"
+            }
+        }
+    </script>
+</body>
+</html>

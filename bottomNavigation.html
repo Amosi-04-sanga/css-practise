@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bottom navigation from shule direct.</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+        body {
+            /* remove default padding and margin  */
+            padding: 0;
+            margin: 0;
+            /* background color  */
+            background-color: lightblue;
+        }
+        .bottom-navigation-container {
+            width: 100%;
+            /*  grid display */
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: auto;
+        }
+        .left-container {
+            background-color: inherit;
+            padding: 1.7em;
+        }
+        .right-container {
+            background-color: inherit;
+            padding: 1.7em;
+        }
+        h3 {
+            text-transform: capitalize;
+        }
+        ul {
+            list-style-type: none;
+            /*  remove default padding */
+            padding: 0;
+        }
+        li {
+            font-family: cursive;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        li:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="bottom-navigation-container">
+        <!-- left container -->
+        <div class="left-container">
+            <div class="forms-container">
+                <!-- study notes -->
+                <div class="study-notes">
+                    <h3>study notes</h3>
+                </div>
+                <div class="forms">
+                    <ul>
+                        <li>formI</li>
+                        <li>formII</li>
+                        <li>formIII</li>
+                        <li>formIV</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- revision container -->
+            <div class="revision-container">
+                <div class="revisions-header">
+                    <h3>revisions</h3>
+                </div>
+                <div class="revisions">
+                    <ul>
+                        <li>past papers</li>
+                        <li>discussions</li>
+                        <li>makini quizzes</li>
+                        <li>practical videos</li>
+                        <li>periodic table</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- right container -->
+        <div class="right-container">
+            <!-- extra curricular -->
+            <div class="extra-curricular-container">
+                <div class="extra-curricular-header">
+                    <h3>extra curricular</h3>
+                </div>
+                <div class="extra-curricular-list">
+                    <ul>
+                        <li>life skills discussions</li>
+                        <li>sports and games</li>
+                        <li>entertainment</li>
+                    </ul>
+                </div>
+            </div>
+               <!-- more container -->
+            <div class="more-container">
+                <div class="more-header">
+                    <h3>more</h3>
+                </div>
+                <div class="more-list">
+                    <ul>
+                        <li>about shule direct</li>
+                        <li>contact</li>
+                        <li>privacy policy</li>
+                        <li>testminials</li>
+                        <li>terms of use</li>
+                        <li>mkali wa mapindi</li>
+                        <li>makini quizzes</li>
+                        <li>terms and conditions</li>
+                        <li>gift shops</li>
+                        <li>ticha kidevu's shops</li>
+                        <li>about shule direct</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
