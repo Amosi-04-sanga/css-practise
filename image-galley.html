@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>an image galley.</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+        body {
+            background-color: bisque;
+            /*  remove default padding and margin  */
+            padding: 0;
+            margin: 0;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+        }
+        .grid-image-container {
+            display: grid;
+            grid-gap: 14px;
+            border: 2px solid black;
+            border-radius: .4em;
+            padding: .1em .2em;
+            width: calc(100% - 80px);
+            margin: 40px auto;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(9, 80px);
+        }
+        .image1 {
+            grid-column: 1 / 4;
+            grid-row: 1 / 4;
+        }
+        .image2 {
+            grid-column: 1 / 4;
+            grid-row: 4 / 7;
+        }
+        .image3 {
+            grid-column: 1 / 6;
+            grid-row: 7 / 10;
+        }
+        .image4 {
+            grid-column: 6 / 10;
+            grid-row: 7 / 10;
+        }
+        .image5 {
+            grid-column: 4 / 10;
+            grid-row: 5 / 7;
+        }
+        .image6 {
+            grid-column: 4 / 7;
+            grid-row: 1 / 5;
+        }
+        .image7 {
+            grid-column: 7 / 10;
+            grid-row: 1 / 3;
+        }
+        .image8 {
+            grid-column: 7 / 10;
+            grid-row: 3 / 5;
+        }
+        .header h2 {
+            text-transform: uppercase;
+            color: blueviolet;
+            font-weight: normal;
+            text-align: center;
+            font-family: 'Sofia', cursive;
+        }
+        .header {
+            width: calc(100% - 120px);
+            margin: auto;
+            border-radius: 12px;
+            background-color: cadetblue;
+        }
+        .little-description {
+            font-size: 1.6em;
+            padding: 0 .4em;
+            font-family: 'Sacramento', cursive;
+        }
+        .little-description p {
+            font-family: inherit;
+            font-size: inherit;
+            color: green;
+        }        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>an image galley using grid layout.</h2>
+    </div>
+    <div class="little-description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos repellendus natus et provident, repudiandae cupiditate asperiores facere assumenda quis? Voluptas, voluptatibus.</p>
+    </div>
+    <div class="grid-image-container">
+        <div class="image1"><img src="amazing-flyover.jpg" alt=""></div>
+        <div class="image2"><img src="image02.png" alt=""></div>
+        <div class="image3"><img src="image04 (2).jpg" alt=""></div>
+        <div class="image4"><img src="image06.png" alt=""></div>
+        <div class="image5"><img src="beauty-reliel.jpg" alt=""></div>
+        <div class="image6"><img src="resting-place.jpg" alt=""></div>
+        <div class="image7"><img src="water-fall.jpg" alt=""></div>
+        <div class="image8"><img src="beach.jpg" alt=""></div>
+    </div>
+</body>
+</html>
