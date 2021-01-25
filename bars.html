@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: bisque;
+        }
+        .container {
+            width: 80%;
+            height: 60vh;
+            padding: .6em;
+            border-radius: 7px;
+            display: grid;
+            grid-template-columns: repeat(14, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            background-color: lightblue;
+        }
+        
+        .bar1 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 7;
+            background-color: black;
+        }
+        .bar2 {
+            grid-column: 6 / 7;
+            grid-row: 3 / 7;
+            background-color: black;
+        }
+        .bar3 {
+            grid-column: 9 / 10;
+            grid-row: 3 / 7;
+            background-color: black;
+        }
+        .bar4 {
+            grid-column: 12 / 13;
+            grid-row: 5 / 7;
+            background-color: black;
+        }
+        .bar5 {
+            grid-column: 14 / 15;
+            grid-row: 3 / 7;
+            background-color: black;
+        }
+        .line1 {
+            grid-column: 1 / 15;
+            grid-row: 1;
+        }
+        .line2 {
+            grid-column: 1 / 15;
+            grid-row: 2;
+        }
+        .line3 {
+            grid-column: 1 / 15;
+            grid-row: 3;
+        }
+        .line4 {
+            grid-column: 1 / 15;
+            grid-row: 4;
+        }
+        .line5 {
+            grid-column: 1 / 15;
+            grid-row: 5;
+        }
+        .line6 {
+            grid-column: 1 / 15;
+            grid-row: 6;
+        }
+        .line7 {
+            grid-column: 1 / 15;
+            grid-row: 7;
+        }
+        
+        .bar1, .bar2, .bar3, .bar4, .bar5 {
+            box-shadow: 1px 1px 5px 1px rebeccapurple;
+            border-radius: 10px 7px 0 0;
+            position: relative;
+            
+        }
+        .line1, 
+        .line2, 
+        .line3, 
+        .line4, 
+        .line5, 
+        .line6, 
+        .line7{
+            height: 2px;
+            background-color: blue;
+        }
+        .line1::before,
+        .line2::before,
+        .line3::before, 
+        .line4::before, 
+        .line5::before, 
+        .line6::before, 
+        .line7::before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            position: relative;
+            top: -3px;
+            left: 2px;
+            border-radius: 50%;
+            background-color: rebeccapurple;
+        }
+        .header_container {
+            width: 50%;
+            background-color: inherit;
+            font-family: cursive;
+        }
+        .header_container h2 {
+            color: green;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body>
+       <div class="header_container">
+           <h2>a simple bar</h2>
+           <p>this is grid Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur et itaque odio!</p>
+       </div>
+        <div class="container">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="bar4"></div>
+            <div class="bar5"></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+            <div class="line5"></div>
+            <div class="line6"></div>
+            <div class="line7"></div>
+        </div>
+</body>
+</html>
