@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the citizen newspaper</title>
+    <style>
+        /* css reset */
+        html, body, * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            box-sizing: border-box;
+        }
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+        body {
+            background-color: thistle;
+        }
+        .thecitizen {
+            margin: 45px auto;
+            width: 90%;
+        }
+        .thecitizen__header {
+            border-top: 1px solid;
+            width: 100%;
+            height: 70px;
+            /* position  */
+            position: relative;
+            /* thecitizen__header grid  */
+            display: grid;
+            grid-template-columns: 120px auto 50px;
+            grid-template-rows: auto;
+        }
+        /* the citizen logo  */
+        .thecitizen__logo {
+            font-size: 20px;
+            padding: 4px;
+            font-weight: bolder;
+        }
+        .thecitizen__c {
+            border-radius: 55%;
+            padding: 2px;
+            background-color: rgb(128, 100, 100);
+        }
+        .thecitizen__date {
+            text-transform: capitalize;
+        }
+        .thecitizen__news {
+            margin-top: 10px;
+        }
+        .thecitizen__news span{
+            background-color: red;
+            padding: 5px;
+            color: white;
+        }
+        .thecitizen__middle {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .thecitizen__left {
+            border-right: 2px solid black;
+        }
+        .thecitizen__middle {
+            border-right: 2px solid black;
+            padding: 5px 7px;
+        }
+        .thecitizen__right {
+            border: none;
+            padding: 3px;
+        }
+        .thecitizen__3 {
+            display: flex;
+            justify-content: flex-end;
+            font-family: cursive;
+            font-size: 22px;
+            padding-top: 10px;
+        }
+        .thecitizen__leftlines {
+            display: grid;
+            position: absolute;
+            bottom: 0;
+            grid-template-columns: repeat(35, 1fr);
+        }
+        .line {
+            height: 9px;
+            width: 5px;
+            border-left: 1px solid black;
+        }
+        .thecitizen__middlelines {
+            display: grid;
+            position: absolute;
+            bottom: 0;
+            grid-template-columns: repeat(90, 1fr);
+        }
+        .thecitizen__rightlines {
+            display: grid;
+            position: absolute;
+            bottom: 0;
+            grid-template-columns: repeat(30, 1fr);
+        }
+        .crime {
+            margin: 25px 0 20px 0;
+            display: grid;
+            grid-template-columns: auto 70px;
+            grid-template-rows: auto;
+            grid-gap: 10px;
+        }
+        .crime__image img{
+            width: 100%;
+            height: 100%;
+        }
+        .main__header {
+            text-align: center;
+            font-size: x-large;
+        }
+        .main__content {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-areas: 
+               'main__firsttopcol main__secondtopcol main__thirdtopcol  main__forthtopcol main__firthtopcol'
+               'main__redheader main__redheader main__redheader main__redheader main__redheader'     
+               'main__firstbottomcol main__secondbottomcol main__thirdbottomcol  main__forthbottomcol main__firthbottomcol'     
+            ;
+        }
+        .main__content div {
+            background-color: tan;
+        }
+        /* grid areas  */
+        .main__firsttopcol {
+            grid-area: main__firsttopcol;
+        }
+        .main__secondtopcol {
+            grid-area: main__secondtopcol;
+        }
+        .main__thirdtopcol {
+            grid-area: main__thirdtopcol;
+        }
+        .main__forthtopcol {
+            grid-area: main__forthtopcol;
+        }
+        .main__firthtopcol {
+            grid-area: main__firthtopcol;
+        }
+        div.main__redheader {
+            grid-area: main__redheader;
+            background-color: red;
+            color: white;
+            text-align: center;
+            font-style: oblique;
+            padding: 5px;
+            margin: 12px 0;
+        }
+        .main__firstbottomcol {
+            grid-area: main__firstbottomcol;
+        }
+        .main__secondbottomcol {
+            grid-area: main__secondbottomcol;
+        }
+        .main__thirdbottomcol {
+            grid-area: main__thirdbottomcol;
+        }
+        .main__forthbottomcol {
+            grid-area: main__forthbottomcol;
+        }
+        .main__firthbottomcol {
+            grid-area: main__firthbottomcol;
+        }
+    </style>
+</head>
+<body>
+    <div class="thecitizen">
+        <div class="thecitizen__header">
+           <!-- left header-->
+           <div class="thecitizen__left">
+               <div class="thecitizen__logo">
+                   <p>The<span class="thecitizen__c">C</span>itizen</p>
+                </div>
+           <!-- small lines -->
+           <div class="thecitizen__leftlines">
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+                 <div class="line"></div>
+             </div>
+           </div>
+           <!-- middle header-->
+           <div class="thecitizen__middle">
+             <div class="thecitizen__date">
+                 <p class="thecitizen__thursday">thursday</p>
+                 <p class="thecitizen__november">26 November 2020</p>
+             </div>
+             <div class="thecitizen__news">
+                 <span>NEWS</span>
+             </div>
+             <!-- small lines -->
+             <div class="thecitizen__middlelines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+           </div>
+           <!-- right header-->
+           <div class="thecitizen__right">
+            <div class="thecitizen__3">3</div>
+            <!-- small lines -->
+            <div class="thecitizen__rightlines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+           </div>
+       </div>
+            <!-- an image and aside -->
+       <div class="crime">
+           <div class="crime__image">
+               <img src="technology.png" alt="">
+           </div>
+           <div class="crime__aside">
+               <h2>crime scene.</h2>
+               <p>police look for clues Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eligendi facilis quas deleniti neque quia iusto cumque!</p>
+           </div>
+       </div>
+       <!-- main section -->
+       <div class="main">
+           <div class="main__header">
+               <h1>cyril throws down gauntlet</h1>
+               <h2><b>economic sabotage:</b> president sets up task team to deal with attack on trucks</h2>
+           </div>
+           <div class="main__content">
+               <div class="main__firsttopcol">
+                   <h3 style="text-align: center; color: rebeccapurple;">violence has elements of terrorism</h3>
+                   <p> president cyril ramaphosas Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi aspernatur accusantium odio explicabo mollitia!</p>
+               </div>
+               <div class="main__secondtopcol">Lorem ipsum dolor sit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, porro reiciendis minus eius corporis distinctio qui ipsum libero.</div>
+               <div class="main__thirdtopcol">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nisi labore illum animi dolorum qui fuga distinctio!</div>
+               <div class="main__forthtopcol">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit earum commodi itaque non vel?</div>
+               <div class="main__firthtopcol">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, cumque. Error totam, repudiandae sapiente illum consectetur ex!</div>
+               <div class="main__redheader">
+                   <h2>prasa makes more money on interest on unspent capital than fares</h2>
+               </div>
+               <div class="main__firstbottomcol">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta laboriosam porro inventore beatae ut consequuntur, quibusdam deserunt aliquid?  sit amet.</div>
+               <div class="main__secondbottomcol">Lorem ipsum dolo Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta laboriosam porro inventore beatae ut consequuntur, quibusdam deserunt aliquid? sit amet.</div>
+               <div class="main__thirdbottomcol">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta laboriosam porro inventore beatae ut consequuntur, quibusdam deserunt aliquid? sit amet.</div>
+               <div class="main__forthbottomcol">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta laboriosam porro inventore beatae ut consequuntur, quibusdam deserunt aliquid? sit amet.</div>
+               <div class="main__firthbottomcol">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta laboriosam porro inventore beatae ut consequuntur, quibusdam deserunt aliquid? sit amet.</div>
+           </div>
+       </div>
+    </div>
+</body>
+</html>
