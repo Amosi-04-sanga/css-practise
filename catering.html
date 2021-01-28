@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catering project.</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Josefin+Slab:wght@100&display=swap" rel="stylesheet">
+<style>
+    /* css reset  */
+    html, body, * {
+        margin: 0;
+        padding: 0;
+    }
+    html {
+        box-sizing: border-box;
+    }
+    *, *::before, *::after {
+        box-sizing: inherit;
+    }
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Josefin Slab', serif;
+    }
+    /* gourmet top */
+    .gourmet {
+        padding-left: 40px;
+        margin: 12px auto;
+    }
+    .gourmet__link {
+        text-decoration: none;
+        color: black;
+        padding: 6px;
+        border-radius: 10px;
+    }
+    .gourmet__heading {
+        letter-spacing: 3px;
+    }
+    .gourmet__link:hover {
+        background-color: rgb(151, 145, 145);
+    }
+    .le__catering {
+        margin: 0;
+        background-color: hotpink;
+        height: 32vh;
+        width: 100%;
+        /* background image  */
+        background-image: url("image02.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        /* position text */
+        position: relative;
+    }
+    .le__catering__text {
+        position: absolute;
+        bottom: 14px;
+        left: 20px;
+        font-size: x-large;
+        font-weight: bolder;
+    }
+    /* about catering  */
+    .about__catering__header {
+        margin: 70px 0 10px 0;
+        text-align: center;
+    }
+    .about__catering__subheader {
+        text-align: center;
+        margin: 20px 0 22px 0;
+    }
+    .about__catering__text {
+        text-indent: 20px;
+        color: black;
+        /* some margin  */
+        margin: 20px 0;
+        line-height: 24px;
+    }
+    .about__catering__seasonal {
+        padding: 3px;
+        background-color: rgb(230, 220, 220);
+    }
+    .low__opacity { /* this is modifier  */
+       opacity: .5;
+    }
+    .margin__bottom {
+        margin-bottom: 120px;
+    }
+    hr {
+        width: 90%;
+        margin: auto;
+        height: 3px;
+        background: linear-gradient(90deg, tan, magenta, cyan, orange, pink, seagreen);
+    }
+    /* our menu  */
+    .ourmenu {
+        margin: 80px 0 40px 0;
+        padding: 30px;
+    }
+    .ourmenu__header {
+        text-align: center;
+        margin: 42px 0;
+    }
+    .ourmenu__bread__basket, .ourmenu__honey__almond, .ourmenu__belgian__waffle, .ourmenu__scrambled__eggs, .ourmenu__blueberry__pancakes{
+        /* some margin  */
+        margin: 18px 0;
+        /* letter spacing  */
+        letter-spacing: 5px;
+    }
+    .ourmenu__bread, .ourmenu__honey, .ourmenu__belgian, .ourmenu__egg, .ourmenu__blueberry{
+        margin: 10px 0 52px 0;
+    }
+    .flyover {
+        width: 100%;
+        height: auto;
+        /* some margin */
+        margin: 100px 0;
+    }
+    .flyover__image {
+        width: 90%;
+        height: 90vh;
+        /* center an image horizintally  */
+        margin: 12px auto;
+        background-color: cadetblue;
+        /* background image  */
+        background-image: url("amazing-flyover.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /* contact  */
+    .contact {
+        /* some padding and margin  */
+        margin: 50px 0;
+        padding: 30px;
+    }
+    .contact__header {
+        font-size: xx-large;
+        text-transform: capitalize;
+    }
+    .contact__weoffer {
+        margin: 32px 0;
+        text-indent: 22px;
+    }
+    .contact__ouraddress {
+        font-size: x-large;
+        text-align: center;
+        color: green;
+    }
+    .contact__phonenumber {
+        margin: 30px 0 5px;
+    }
+    .contact__form {
+        margin: 42px auto;
+        width: 89%;
+        height: auto;
+    }
+    .contact__username, .contact__people, .contact__date {
+        width: 100%;
+        /* vertical space */
+        margin: 31px;
+        /* border bottom  */
+        border-bottom: 1px solid black;
+        padding: 0 0 20px 0;
+        opacity: .7;
+    }
+    [required]{
+        width: 100%;
+        height: 35px;
+        border: none;
+        border-radius: 12px;
+        padding: 14px;
+        color: rebeccapurple;
+        font-size: 16px;
+        font-family: cursive;
+        background-color: rgb(223, 213, 213);
+    }
+    [type = "submit"] {
+        padding: 7px;
+        /* remove border and outline */
+        border: none;
+        outline: none;
+        background-color: rgb(125, 161, 141);
+        color: black;
+        border-radius: 7px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 17px;
+        box-shadow: 1px 1px 7px 1px black;
+        display: block;
+        margin: auto;
+    }
+</style>
+</head>
+<body>
+  <div class="gourmet__wrapper">
+        <!-- gourmet au catering-->
+    <div class="gourmet">
+        <h3 class="gourmet__heading"><a href="#" class="gourmet__link">gourmet and catering</a></h3>
+    </div>
+    <!-- le catering -->
+    <div class="le__catering">
+        <div class="le__catering__text">
+            <h2>le catering</h2>
+        </div>
+    </div>
+    <!-- about catering -->
+    <div class="about__catering">
+        <div class="about__catering__header">
+            <h1>About Catering</h1>
+        </div>
+        <div class="about__catering__subheader">
+            <h4>Tradition since 1889</h4>
+        </div>
+        <div class="about__catering__text">
+            <p>The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span class="about__catering__seasonal">seasonal</span> ingredients.</p>
+        </div>
+        <div class="about__catering__text margin__bottom low__opacity">
+            <p>Excepteur sint <q>occaecat</q> cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+    <hr>
+    <!-- our menu -->
+    <div class="ourmenu">
+        <div class="ourmenu__header">
+            <h1>Our Menu</h1>
+        </div>
+        <div class="ourmenu__bread">
+            <h2 class="ourmenu__bread__basket">Bread Basket</h2>
+            <p class="ourmenu__fresh__fruits">Assortment of fresh baked fruit breads and muffins 5.50</p>
+        </div>
+        <div class="ourmenu__honey">
+            <h2 class="ourmenu__honey__almond">Honey Almond Granola with Fruits</h2>
+            <p class="ourmenu__natural__cereal">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+        </div>
+        <div class="ourmenu__belgian">
+            <h2 class="ourmenu__belgian__waffle">Belgian Waffle</h2>
+            <p class="ourmenu__vanilla">Vanilla flavored batter with malted flour 7.50</p>
+        </div>
+        <div class="ourmenu__egg">
+            <h2 class="ourmenu__scrambled__eggs">Scrambled eggs</h2>
+            <p class="ourmenu__redpaper">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+        </div>
+        <div class="ourmenu__blueberry">
+            <h2 class="ourmenu__blueberry__pancakes">Blueberry Pancakes</h2>
+            <p class="ourmenu__butter">With syrup, butter and lots of berries 8.50</p>
+        </div>
+    </div>
+    <!-- an image -->
+    <div class="flyover">
+        <div class="flyover__image"></div>
+    </div>
+    <hr>
+    <!-- contact section -->
+    <div class="contact">
+        <div class="contact__header">
+            <h2>contact</h2>
+        </div>
+        <div class="contact__weoffer">
+            <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us</p>
+        </div>
+        <div class="contact__address">
+            <p class="contact__ouraddress">Catering Service, 42nd Living St, 43043 New York, NY</p>
+            <p class="contact__phonenumber">You can also contact us by phone 00553123-2323 or email</p>
+            <p class="contacta__email">catering@catering.com, or you can send us a message here:</p>
+        </div>
+        <div class="contact__form">
+            <form action="/action_page.php" target="_blank">
+              <div class="contact__username">
+                  <p><input type="text" name="Name" placeholder="Your Name" required></p>
+              </div>
+              <div class="contact__people">
+                  <p><input type="number" name="people" placeholder="how many people" required></p>
+              </div>
+              <div class="contact__date">
+                  <p><input type="datetime-local" name="date" placeholder="enter date and time" required></p>
+              </div>
+              <div class="contact__submit">
+                  <p><input type="submit" name="submit" placeholder="submit"></p>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
