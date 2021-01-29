@@ -1,0 +1,177 @@
+/* reset margin and padding */
+html, body, * {
+    margin: 0;
+    padding: 0;
+}
+/* box sizing border box  */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+/* body fontfamily  */
+body {
+    background-color: tan;
+    font-weight: normal;
+    max-height: 100vh;
+    max-width: 100vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container {
+    margin: 45px 10px 20px;
+    border-top: 1px solid black;
+    display: grid;
+    grid-gap: 2px;
+    background-color: inherit;
+    padding: 10px;
+    grid-template-areas: 
+      'h h h h h'
+      'ph ph ph r p'
+      'pb img img r p'
+      'pb img img r p'
+      'pb m1 m2 r p'
+      'uh uh uh r p'
+      'u u u r p'
+    ;
+}
+.container div {
+    background-color: inherit;
+    padding: 2px;
+    color: black;
+}
+.header {
+    grid-area: h;
+}
+.pablo {
+    grid-area: pb;
+}
+.pabloimg {
+    grid-area: img;
+    width: 100%;
+    height: 60vh;
+}
+.pabloimg img {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.pablo_header {
+    grid-area: ph;
+}
+.united {
+    grid-area: u;
+}
+.united_header {
+    grid-area: uh;
+}
+.results {
+    grid-area: r;
+}
+.paris {
+    grid-area: p;
+}
+.moreleft {
+    grid-area: m1;
+}
+.moreright {
+    grid-area: m2;
+}
+/* header section */
+.header {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    border-bottom: 1px solid black;
+}
+.header__left {
+    display: grid;
+    place-items: center;
+    font-family: cursive;
+    border-right: 1px solid black;
+}
+.header__middle {
+    padding: 4px;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header__right {
+    display: grid;
+    place-items: center;
+}
+.header__cursive {
+    font-family: cursive;
+}
+.header__c {
+    font-size: 32px;
+    font-family: cursive;
+    color: wheat;
+    background-color: rgb(82, 75, 75);
+    border-radius: 50%;
+}
+.pablo_header h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: xx-large;
+    font-family: cursive;
+}
+.header__alignleft {
+    text-align: left;
+    color: rebeccapurple;
+    font-style: italic;
+}
+.pablo {
+    margin: 20px 4px 7px;
+}
+.pablo__author {
+    border-bottom: 1px solid black;
+    border-top: 1px dashed black;
+}
+.pablo__michael {
+    font-style: italic;
+}
+.pablo__parag {
+    margin: 8px 0 5px;
+    text-indent: 12px;
+}
+.united__image {
+    display: grid;
+    place-items: center;
+}
+.united__image img {
+    width: 100%;
+    height: 70%;
+}
+.united {
+    display: flex;
+}
+.results__header {
+    margin: 12px auto 14px;
+}
+.results {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.result__race {
+    margin: 10px auto;
+}
+/* paris image  */
+.paris__image {
+    display: grid;
+    place-items: center;
+}
+.paris__image img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+/* header sport  */
+.header__green {
+    background-color: green;
+    padding: 8px; /* outer space  */
+    border-radius: 50% 0 50%;
+    text-transform: capitalize;
+    color: white;
+}
+/* the end  */
